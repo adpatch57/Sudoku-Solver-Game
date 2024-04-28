@@ -11,6 +11,12 @@ pyglet.font.add_file('mc.otf')
 
 
 class SAMPLEAPP(tk.Tk):
+    # Prototype Design Pattern
+    def Type(self):
+        return "Application"
+
+    def __str__(self):
+        return "APP"
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
@@ -48,6 +54,11 @@ class SAMPLEAPP(tk.Tk):
 
 
 class MainMenu(tk.Frame):
+    def Type(self):
+        return "Main Menu"
+
+    def __str__(self):
+        return "MENU"
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -95,6 +106,11 @@ class MainMenu(tk.Frame):
 
 
 class SolveItYourself(tk.Frame):
+    def Type(self):
+        return "SOLVE SUDOKU"
+
+    def __str__(self):
+        return "SIYS"
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -248,6 +264,11 @@ class SolveItYourself(tk.Frame):
 
 
 class SolveFromImage(tk.Frame):
+    def Type(self):
+        return "SOLVE SUDOKU FROM IMAGE"
+
+    def __str__(self):
+        return "SSFI"
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
