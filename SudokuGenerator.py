@@ -21,7 +21,9 @@ class SudokuBoard(Board):
     def __init__(self):
         self.board = []
         self.solvedboard = []
-        self.generateBoard()
+        #self.generateBoard()
+        self.removeNumbers = self.decorator(self.removeNumbers)
+        self.removeNumbers()
 
     def print_board(self):
         print("Actual board :\n")
@@ -193,6 +195,15 @@ class SudokuBoard(Board):
                 board[row][col] = 0  # Backtrack
         return count
 
+    def decorator(self, func):
+        def generateBoard():
+            self.board = [[0 for i in range(9)] for j in range(9)]
+            self.generateDiagonalFilledBoard()
+            self.solvedboard = copy.deepcopy(self.board)
+
+            func()
+        return generateBoard
+
     def removeNumbers(self):
         attempts = 5
         while attempts > 0:
@@ -217,12 +228,19 @@ class SudokuBoard(Board):
                 # We could stop here, but we can also have another attempt with a different cell just to try to remove more numbers
                 attempts -= 1
 
+
+    """
     def generateBoard(self):
         self.board = [[0 for i in range(9)] for j in range(9)]
         self.generateDiagonalFilledBoard()
         self.solvedboard = copy.deepcopy(self.board)
 
         self.removeNumbers()
+    """
+
+
+
+
 
 
 
