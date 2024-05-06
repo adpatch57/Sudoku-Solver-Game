@@ -1,3 +1,6 @@
+OOP VilniusTech Coursework Report : Sudoku Solver Game
+============
+
 Introduction
 ============
 
