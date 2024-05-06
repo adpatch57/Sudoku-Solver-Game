@@ -28,20 +28,35 @@ Body/Analysis
 ============
 The program implement all 4 object-oriented programming pillars
 - Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to represent different underlying forms (data types or classes). In Python, polymorphism is achieved through method overriding and method overloading. Method overriding involves redefining a method in a subclass that is already defined in the superclass, while method overloading involves defining multiple methods with the same name but with different parameters. In the Sudoku solver, polymorphism might be demonstrated through the use of a common function for organizing different objects in the windows, the use of the function .grid.
+
+![screenshot](screenshots/screenshot1.png)
+
+![screenshot](screenshots/screenshot2.png)
+
 - Abstraction is the concept of hiding the complex implementation details and showing only the necessary features of an object to the outside world. Abstraction is achieved by defining classes with methods and properties that provide a high-level interface for interacting with objects, while hiding the internal implementation details. In the Sudoku solver, abstraction might be exemplified by defining classes for the puzzle, cell. These classes expose methods for interacting with the puzzle (e.g., solving, validating), hiding the intricacies of the puzzle-solving algorithms.
 - Inheritance is the mechanism by which a new class inherits properties and behavior (methods) from an existing class (superclass). It promotes code reusability and establishes a hierarchy of classes. In Python, inheritance is implemented by creating a new class that derives from an existing class using the syntax class NewClass(BaseClass):. The new class inherits attributes and methods from the base class. In the Sudoku solver, inheritance might be demonstrated by creating subclasses for different frames of the UI. These subclasses inherit common solving logic from a superclass representing a generic frame from the tkinter library.
 - Encapsulation is the bundling of data and methods that operate on the data into a single unit, called a class. It restricts direct access to some of the object's components, protecting the integrity of the data. Encapsulation is achieved by defining class attributes and providing public methods (getters and setters) to access or modify these attributes. In the Sudoku solver, encapsulation might be illustrated by defining attributes for the puzzle grid and providing public methods for accessing and updating the grid. This ensures that the internal state of the puzzle is controlled and manipulated only through designated interfaces.
 
+![screenshot](screenshots/screenshot3.png)
+
 
 It also use at least 2 design patterns such as singletons and decorators.
 The Singleton design pattern ensures that a class has only one instance and provides a global point of access to that instance. The Singleton pattern is most suitable in scenarios where exactly one instance of a class is needed, such as managing shared resources or maintaining global state. In the Sudoku solver, ensuring a single puzzle instance simplifies coordination between different solving strategies and prevents unnecessary duplication of puzzle data. Moreover, decorators are functions that modify the behavior of other functions or methods. They allow additional functionality to be added to existing functions dynamically without modifying their code directly. This promotes code reusability and simplifies maintenance by keeping the core functionality of classes and methods focused on their primary purpose.
+
+![screenshot](screenshots/screenshot4.png)
+
+![screenshot](screenshots/screenshot5.png)
+
+![screenshot](screenshots/screenshot6.png)
 
 Compared to other design patterns or techniques, the Singleton pattern and decorators are particularly suitable for the Sudoku solver program due to their ability to enforce single instance semantics and add modular functionality seamlessly. These patterns contribute to the program's clarity, maintainability, and extensibility
  
  
 The program implement functions to import and export data such as images files. 
 
+![screenshot](screenshots/screenshot7.png)
 
+![screenshot](screenshots/screenshot8.png)
 
 Results and Summary
 ============
